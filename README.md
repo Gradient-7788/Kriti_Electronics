@@ -32,4 +32,42 @@ This project implements an automated wiper control system with rain sensing and 
 
 ## System Block Diagram
 Key components and their connections:
-![Block Diagram](https://example.com/path/to/block_diagram.png)
+![Block Diagram](./block_diagram.pdf)
+
+## Installation and Setup
+1. Upload `wireless_break.ino` to ESP8266
+2. Upload `speedometer_needle.ino` to Arduino
+3. Connect hardware components as shown in schematic
+4. Power on the system:
+   - ESP8266 will create WiFi hotspot
+   - Arduino will initialize servo and sensor inputs
+
+## Operation
+1. **Automatic Mode**:
+   - Wiper speed automatically adjusts based on rain intensity
+   - Speedometer needle shows current speed level (0-180°)
+
+2. **Manual Control**:
+   - Connect to ESP8266 hotspot (192.168.4.1)
+   - Use web interface to turn system ON/OFF
+
+## Schematic Details
+The system uses:
+- LM393 comparators for rain sensor processing
+- 74HC04 and 74HC08 logic gates for signal conditioning
+- L298N for motor driving
+- Relay module for direction control
+
+## Troubleshooting
+- If WiFi doesn't connect, verify ESP8266 power and settings
+- Check Serial Monitor for rain sensor and servo debug info
+- Verify all component connections match schematic
+
+## Future Enhancements
+- Add mobile app control
+- Implement speed presets
+- Add weather forecast integration
+- Improve power efficiency
+
+## License
+This project is open-source under MIT License.
