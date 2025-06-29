@@ -32,7 +32,7 @@ This project implements an automated wiper control system with rain sensing and 
 
 ## System Block Diagram
 Key components and their connections:
-![Block Diagram](./block_diagram.pdf)
+![Block Diagram](./block_diagram.png)
 
 ## Installation and Setup
 1. Upload `wireless_break.ino` to ESP8266
